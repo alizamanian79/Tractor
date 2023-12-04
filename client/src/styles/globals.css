@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: "YekanBakht";
+  src: url("@/files/fonts/YekanBakhRegular.otf");
+}
+
+@font-face {
+  font-family: "YekanBakhtBold";
+  src: url("@/files/fonts/YekanBakhBold.otf");
+}
+
+@font-face {
+  font-family: "Parastoo";
+  src: url("@/files/fonts/Parastoo.woff");
+}
+
+@font-face {
+  font-family: "ParastooBold";
+  src: url("@/files/fonts/Parastoo-Bold.woff");
+}
+
+@font-face {
+  font-family: "iranSans";
+  src: url("@/files/fonts/IRANSans-Light-web.ttf");
+}
+
+@font-face {
+  font-family: "iranSansBold";
+  src: url("@/files/fonts/IranianSansBold.ttf");
+}
+
+@font-face {
+  font-family: "samin";
+  src: url("@/files/fonts/Samim.woff");
+}
+
+@font-face {
+  font-family: "tanha";
+  src: url("@/files/fonts/Tanha.woff");
+}
+
+@font-face {
+  font-family: "shabnam";
+  src: url("@/files/fonts/Shabnam.woff");
+}
+
+@font-face {
+  font-family: "shabnamBold";
+  src: url("@/files/fonts/Shabnam-Bold.woff");
+}
+
+@font-face {
+  font-family: "vazir";
+  src: url("@/files/fonts/Vazir-Light.ttf");
+}
+
+@font-face {
+  font-family: "vazirBold";
+  src: url("@/files/fonts/Vazir-Bold.woff");
+}
+
+@font-face {
+  font-family: "nastaliq";
+  src: url("@/files/fonts/IranNastaliq_1.ttf");
+}
+
+@font-face {
+  font-family: "dima";
+  src: url("@/files/fonts/Dima\ Shekasteh.ttf");
+}
+
+@font-face {
+  font-family: "shekaste";
+  src: url("@/files/fonts/Shekasteh\ V2.001.ttf");
+}
