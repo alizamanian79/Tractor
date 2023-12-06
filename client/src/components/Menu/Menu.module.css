@@ -1,0 +1,144 @@
+
+.dvMenu{
+    width: 100%;
+    height: 65px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5px solid rgb(230, 230, 230);
+    border-top:0.5px solid rgb(230, 230, 230);
+
+    direction: rtl;
+}
+.menu{
+    width: 100%;
+    height: 100%;
+    background-color:transparent;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.dvLogo{
+    width: 20%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 0.5px solid rgb(230, 230, 230)
+}
+.img{
+    width: auto;
+    height: 51px;
+}
+.dvContent{
+    width: 54.7%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-right: 0.5px solid rgb(230, 230, 230);
+}
+
+.contentItem{
+  width: auto;
+  height: auto;
+  margin: 0 1rem;
+  font-family: yekanBakhtBold;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+.contentItem:hover{
+    color: #0C95EC;
+}
+.icons{
+    color: black;
+    margin: 0;
+    font-size: 12px;
+    margin: 3px 6px 0 0;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+.contentItem:hover .icons {
+    color: #0C95EC;
+  }
+
+
+.dvBtns{
+    width: 5%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 0.5px solid rgb(230, 230, 230);
+}
+
+
+.getQoets{
+    width: 10%;
+    height: auto;
+    background-color: #0C95EC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quotesText{
+    font-family: yekanBakht;
+    color: white;
+}
+
+@media screen and (min-width:0px) and (max-width:426px) {
+
+    .img{
+        height: 32px;
+    }
+    .dvLogo{
+        width: 30%;
+    }
+    .dvContent{
+        width: 7%;
+    }
+ .contentItem{
+    display: none;
+ } 
+ .dvBtns{
+width: 13%;
+ }
+ .getQoets{
+    width: 23%;
+ } 
+}
+@media screen and (min-width:427px) and (max-width:769px) {
+    .img{
+        height: 35px;
+    }
+    .dvLogo{
+        width: 25%;
+    }
+    .dvContent{
+        width: 35%;
+    }
+ .contentItem{
+    display: none;
+ } 
+ .dvBtns{
+width: 7%;
+ }
+ .getQoets{
+    width: 18%;
+ }
+}

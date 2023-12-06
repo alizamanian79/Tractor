@@ -16,6 +16,6 @@ Add to return part
               icon={faSkype}
               color="red"
               size="20px"
-              margin={margin}
+              margin="0px"
               mouseOverColor="blue"
             />
