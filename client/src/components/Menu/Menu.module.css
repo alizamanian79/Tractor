@@ -122,7 +122,7 @@ width: 13%;
     width: 23%;
  } 
 }
-@media screen and (min-width:427px) and (max-width:769px) {
+@media screen and (min-width:427px) and (max-width:1024px) {
     .img{
         height: 35px;
     }
