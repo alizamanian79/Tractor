@@ -1,0 +1,21 @@
+
+
+Import file
+
+
+//fontawsome 
+import Icon from '@/components//fontawsome/Icon';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
+Add to functional part of your component
+Nothing
+
+Add to return part
+<Icon
+              icon={faSkype}
+              color="red"
+              size="20px"
+              margin={margin}
+              mouseOverColor="blue"
+            />

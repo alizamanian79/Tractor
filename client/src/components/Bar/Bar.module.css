@@ -1,0 +1,69 @@
+
+
+.dvBar{
+    width:100% ;
+    height:50px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+
+}
+
+.bar{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+ .sides{
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    direction: ltr;
+}
+.sides:nth-child(1){
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    direction: rtl;
+    
+}
+
+.contacts{
+    width: auto;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 3.5rem;
+}
+.contactText:hover{
+    color: #0C95EC;
+    cursor: pointer;
+}
+.contactText{
+    font-family: yekanBakhtBold;
+    margin: 0 5px 0 0;
+    color: #cbcbcb;
+    transition: 0.2s ease-out;
+    -webkit-transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -ms-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+}
+
+.leftSideText{
+    font-family: yekanBakhtBold;
+    margin: 0 5px 0 0;
+    color: #cbcbcb;
+    margin-left: 1.5rem;
+}

@@ -1,0 +1,32 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:#ffffff;
+}
+@font-face {
+    font-family: parastoo;
+    src: url(../../files/fonts/Parastoo.woff);
+}
+
+@font-face {
+    font-family: yekan;
+    src: url(../../files/fonts/Yekan.woff);
+}
+
+@font-face {
+    font-family: vazir;
+    src: url(../../files/fonts/Vazir.woff);
+}
+
+@font-face {
+    font-family: yekanBakht;
+    src: url(../../files/fonts/YekanBakhRegular.otf);
+}
+
+@font-face {
+    font-family: yekanBakhtBold;
+    src: url(../../files/fonts/YekanBakhBold.otf);
+}
