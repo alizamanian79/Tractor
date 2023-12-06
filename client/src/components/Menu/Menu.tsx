@@ -67,6 +67,14 @@ function Menu() {
 
         {iconsBtn.map((item: any, index: number) => (
           <div key={index} className={styles.dvBtns}>
+            {index ===1  ? <>
+              <div className={styles.quantity}>0</div>
+              </>
+              : 
+              <>
+              </>
+            }
+            
             <Icon
               icon={item.iconName}
               color="bdbdbd"
