@@ -30,21 +30,23 @@ function Menu() {
     { title: "فروشگاه", hasSubMenu: false },
   ]);
 
-
   const [iconsBtn, setIconsBtn] = useState<any>([
-    {iconName:faSearch},
-    {iconName:faBasketShopping},
-    {iconName:faBars},
-
-  ])
-
-
+    { iconName: faSearch },
+    { iconName: faBasketShopping },
+    { iconName: faBars },
+  ]);
 
   return (
     <div className={styles.dvMenu}>
       <div className={styles.menu}>
         <div className={styles.dvLogo}>
-          <Image src={logo} width={250} height={45} alt="" className={styles.img} />
+          <Image
+            src={logo}
+            width={250}
+            height={45}
+            alt=""
+            className={styles.img}
+          />
         </div>
 
         <div className={styles.dvContent}>
@@ -63,21 +65,20 @@ function Menu() {
           ))}
         </div>
 
-        {iconsBtn.map((item:any,index:number)=>(
-           <div key={index} className={styles.dvBtns}>
-           <Icon
-             icon={item.iconName}
-             color="bdbdbd"
-             size="20px"
-             margin="0px"
-             mouseOverColor="#0C95EC"
-           />
-         </div> 
+        {iconsBtn.map((item: any, index: number) => (
+          <div key={index} className={styles.dvBtns}>
+            <Icon
+              icon={item.iconName}
+              color="bdbdbd"
+              size="20px"
+              margin="0px"
+              mouseOverColor="#0C95EC"
+            />
+          </div>
         ))}
-       
 
-        <div className={styles.getQoets}> 
-        <p className={styles.quotesText}>مشاوره</p>
+        <div className={styles.getQoets}>
+          <p className={styles.quotesText}>مشاوره</p>
           <Icon
             icon={faArrowLeft}
             color="white"
@@ -85,11 +86,7 @@ function Menu() {
             margin="0px 10px 0 0"
             mouseOverColor="white"
           />
-         
         </div>
-
-
-        
       </div>
     </div>
   );
@@ -97,12 +94,3 @@ function Menu() {
 
 export default Menu;
 
-{
-  /* <Icon
-              icon={faLinkedin}
-              color="red"
-              size="20px"
-              margin="0px"
-              mouseOverColor="blue"
-            /> */
-}
