@@ -67,3 +67,11 @@
     color: #cbcbcb;
     margin-left: 1.5rem;
 }
+
+@media screen and (min-width:0px) and (max-width:426px) {
+    .dvBar{display: none;}
+}
+
+@media screen and (min-width:427px) and (max-width:769px) {
+    .dvBar{display: none;}
+}
