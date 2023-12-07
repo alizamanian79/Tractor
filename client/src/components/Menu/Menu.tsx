@@ -4,7 +4,6 @@ import styles from "./Menu.module.css";
 import Image from "next/image";
 import logo from "../../../public/Tractorelogo.png";
 
-import MainMenu from "./main/MainMenu";
 
 //fontawsome
 import Icon from "@/components//fontawsome/Icon";
