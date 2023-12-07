@@ -87,6 +87,7 @@
   flex-direction: column;
   transition:all 0.3s ease-out;
   list-style: inside;
+  font-size: 15px;
 }
 
 .list:hover{

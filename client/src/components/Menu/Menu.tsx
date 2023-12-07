@@ -29,22 +29,42 @@ function Menu() {
     {
       title: "خانه",
       hasSubMenu: true,
-      subMenu: ["salam", "تست دوم ", "تست سوم"],
+      subMenu: [
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
+      ],
     },
     {
       title: "صنایع",
       hasSubMenu: true,
-      subMenu: ["تست اول", "تست دوم ", "تست سوم"],
+      subMenu: [
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
+      ],
     },
     {
       title: "مطالعه",
       hasSubMenu: true,
-      subMenu: ["تست اول", "تست دوم ", "تست سوم"],
+      subMenu: [
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
+      ],
     },
     {
       title: "بلاگ",
       hasSubMenu: true,
-      subMenu: ["تست اول", "تست دوم ", "تست سوم"],
+      subMenu: [
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
+      ],
     },
     {
       title: "فروشگاه",
@@ -84,46 +104,66 @@ function Menu() {
 
         <div className={styles.dvContent}>
           {content.map((item, index) => (
-            <ul className={styles.contentItem}>
-              <li>
-                <p>
-                  {item.title}
-                  {item.hasSubMenu && (
-                    <FontAwesomeIcon
-                      icon={faArrowDown}
-                      className={styles.icons}
-                    />
-                  )}
-                </p>
-              </li>
-              <div className={styles.dvList}>
-                <div className={styles.dvListParts}>
-                  <p className={styles.txCol}>ستون اول</p>
-                  {item.subMenu.map((item) => (
-                    <li className={styles.list}>{item}</li>
-                  ))}
-                </div>
+            <React.Fragment key={index}>
+              {item.subMenu.length > 0 ? (
+                <ul className={styles.contentItem}>
+                  <li>
+                    <p>
+                      {item.title}
+                      {item.hasSubMenu && (
+                        <FontAwesomeIcon
+                          icon={faArrowDown}
+                          className={styles.icons}
+                        />
+                      )}
+                    </p>
+                  </li>
+                  <div className={styles.dvList}>
+                    <div className={styles.dvListParts}>
+                      <p className={styles.txCol}>ستون اول</p>
+                      {item.subMenu.map((subItem, subIndex) => (
+                        <li key={subIndex} className={styles.list}>
+                          {subItem}
+                        </li>
+                      ))}
+                    </div>
 
-                <div className={styles.dvListParts}>
-                  <p className={styles.txCol}>ستون اول</p>
-                  {item.subMenu.map((item) => (
-                    <li className={styles.list}>{item}</li>
-                  ))}
-                </div>
+                    <div className={styles.dvListParts}>
+                      <p className={styles.txCol}>ستون دوم</p>
+                      {item.subMenu.map((subItem, subIndex) => (
+                        <li key={subIndex} className={styles.list}>
+                          {subItem}
+                        </li>
+                      ))}
+                    </div>
 
-                <div className={styles.dvListParts}>
-                  <p className={styles.txCol}>ستون اول</p>
-                  {item.subMenu.map((item) => (
-                    <li className={styles.list}>{item}</li>
-                  ))}
-                </div>
-              </div>
-            </ul>
+                    <div className={styles.dvListParts}>
+                      <p className={styles.txCol}>ستون سوم</p>
+                      {item.subMenu.map((subItem, subIndex) => (
+                        <li key={subIndex} className={styles.list}>
+                          {subItem}
+                        </li>
+                      ))}
+                    </div>
+                  </div>
+                </ul>
+              ) : (
+                <>
+                  <p className={styles.contentItem}>
+                    {item.title}
+                    {item.hasSubMenu && (
+                      <FontAwesomeIcon
+                        icon={faArrowDown}
+                        className={styles.icons}
+                      />
+                    )}
+                  </p>{" "}
+                </>
+              )}
+            </React.Fragment>
           ))}
         </div>
 
-
-        
         {iconsBtn.map((item: any, index: number) => (
           <>
             <div key={index} className={styles.dvBtns}>
@@ -156,8 +196,6 @@ function Menu() {
             mouseOverColor="white"
           />
         </div>
-
-
       </div>
 
       {/*  
