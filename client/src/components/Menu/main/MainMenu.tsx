@@ -1,11 +1,29 @@
-import React from 'react'
-import styles from './main.module.css'
-function MainMenu({state}) {
-  return (
-    <div className={state===false ?styles.mainMenuDeactive:styles.mainMenu}>
-    
-  </div>
-  )
+import React, { useState } from "react";
+import styles from "./main.module.css";
+
+interface MainMenuProps {
+  state: boolean;
+  subMenu: any[];
 }
 
-export default MainMenu
+function MainMenu({ state, subMenu }: MainMenuProps) {
+  
+  const [mode, setMode] = useState(state)
+
+function handleMouseIn() {
+  setMode(true)
+}
+
+  return (
+    <div className={mode === false ? styles.mainMenuDeactive : styles.mainMenu} onMouseOver={handleMouseIn}>
+      an
+      
+      {subMenu.map((item)=>(
+        <p>{item}</p>
+      ))}
+      
+    </div>
+  );
+}
+
+export default MainMenu;

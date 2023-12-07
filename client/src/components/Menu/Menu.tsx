@@ -4,8 +4,7 @@ import styles from "./Menu.module.css";
 import Image from "next/image";
 import logo from "../../../public/Tractorelogo.png";
 
-
-import MainMenu from './main/MainMenu'
+import MainMenu from "./main/MainMenu";
 
 //fontawsome
 import Icon from "@/components//fontawsome/Icon";
@@ -22,23 +21,53 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 interface contentInterface {
   title: string;
   hasSubMenu: boolean;
-  subMenu:any[];
+  subMenu: any[];
 }
 
 function Menu() {
   const [content, setContent] = useState<contentInterface[]>([
-    { title: "خانه", hasSubMenu: true ,subMenu:["تست اول","تست دوم " ,"تست سوم"] },
-    { title: "صنایع", hasSubMenu: true ,subMenu:["تست اول","تست دوم " ,"تست سوم"] },
-    { title: "مطالعه", hasSubMenu: true ,subMenu:["تست اول","تست دوم " ,"تست سوم"] },
-    { title: "بلاگ", hasSubMenu: true ,subMenu:["تست اول","تست دوم " ,"تست سوم"] },
-    { title: "فروشگاه", hasSubMenu: false ,subMenu:["تست اول","تست دوم " ,"تست سوم"] },
+    {
+      title: "خانه",
+      hasSubMenu: true,
+      subMenu: ["salam", "تست دوم ", "تست سوم"],
+    },
+    {
+      title: "صنایع",
+      hasSubMenu: true,
+      subMenu: ["تست اول", "تست دوم ", "تست سوم"],
+    },
+    {
+      title: "مطالعه",
+      hasSubMenu: true,
+      subMenu: ["تست اول", "تست دوم ", "تست سوم"],
+    },
+    {
+      title: "بلاگ",
+      hasSubMenu: true,
+      subMenu: ["تست اول", "تست دوم ", "تست سوم"],
+    },
+    {
+      title: "فروشگاه",
+      hasSubMenu: false,
+      subMenu: [],
+    },
   ]);
   const [iconsBtn, setIconsBtn] = useState<any>([
     { iconName: faSearch },
     { iconName: faBasketShopping },
     { iconName: faBars },
   ]);
-  const [select, setIsselect] = useState<any>(0)
+
+  const [isHover, setIshover] = useState<boolean>(false);
+  const [subMenus, setSubMenus] = useState<any[]>([]);
+
+  const handleMouseIN = (hasSubMenu: any) => {
+    setIshover(true);
+    setSubMenus(hasSubMenu);
+  };
+  const handleMouseOut = () => {
+    setIshover(!isHover);
+  };
 
   return (
     <div className={styles.dvMenu}>
@@ -55,32 +84,41 @@ function Menu() {
 
         <div className={styles.dvContent}>
           {content.map((item, index) => (
-            <>
-              <ul key={index} className={styles.contentItem}>
-                {item.title}
-                
-                {item.hasSubMenu && (
-                  <FontAwesomeIcon
-                    icon={faArrowDown}
-                    className={styles.icons}
-                  />
-                )}
-                
-                {item.subMenu.map((item)=>(
-                  <li className={styles.li}>
-                  {item}
-                  </li>
-                ))}
-                
-                
-                
-              </ul>
-            
-            
-            
-            
-            
-            </>
+            <ul className={styles.contentItem}>
+              <li>
+                <p>
+                  {item.title}
+                  {item.hasSubMenu && (
+                    <FontAwesomeIcon
+                      icon={faArrowDown}
+                      className={styles.icons}
+                    />
+                  )}
+                </p>
+              </li>
+              <div className={styles.dvList}>
+                <div className={styles.dvListParts}>
+                  <p className={styles.txCol}>ستون اول</p>
+                  {item.subMenu.map((item) => (
+                    <li className={styles.list}>{item}</li>
+                  ))}
+                </div>
+
+                <div className={styles.dvListParts}>
+                  <p className={styles.txCol}>ستون اول</p>
+                  {item.subMenu.map((item) => (
+                    <li className={styles.list}>{item}</li>
+                  ))}
+                </div>
+
+                <div className={styles.dvListParts}>
+                  <p className={styles.txCol}>ستون اول</p>
+                  {item.subMenu.map((item) => (
+                    <li className={styles.list}>{item}</li>
+                  ))}
+                </div>
+              </div>
+            </ul>
           ))}
         </div>
 
@@ -116,10 +154,12 @@ function Menu() {
             mouseOverColor="white"
           />
         </div>
-      </div>
-{/* 
-      <div className={styles.mainMenu}>s</div> */}
 
+        
+      </div>
+
+      {/*  
+      <MainMenu state={subMenus == undefined ? false :true} subMenu={subMenus}/> */}
     </div>
   );
 }

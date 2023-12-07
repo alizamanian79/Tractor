@@ -53,7 +53,84 @@
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
+  flex-direction: column;  list-style: none;
 }
+
+.dvList {
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  width: 100%;
+  height: 350px;
+  padding: auto;
+  background-color: rgb(98, 64, 64);
+  transition:all 0.3s ease-out ;
+  -webkit-transition:all 0.3s ease-out ;
+  -moz-transition:all 0.3s ease-out ;
+  -ms-transition:all 0.3s ease-out ;
+  -o-transition:all 0.3s ease-out ;
+  list-style: none;
+  opacity: 0;
+  flex-wrap: wrap;
+  color: black;
+}
+.dvList:hover{
+  color: #0c95ec;
+}
+
+.list{
+  color: azure;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition:all 0.3s ease-out;
+  
+}
+
+.list:hover{
+  color: #0c95ec;
+}
+
+
+
+.dvListParts{
+  width: 33.33%;
+  height: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.txCol{
+  width: 80%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  margin: 3rem 0 1rem 0;
+  border-bottom: 0.5px solid black;
+}
+
+
+
+.contentItem:hover .dvList {
+  display: flex;
+  top: 4.1rem;
+  visibility: visible;
+  opacity: 1;
+}
+
+.listTextItem{
+display: flex;
+flex-direction: column;
+}
+
 .contentItem:hover {
   color: #0c95ec;
 }
@@ -71,8 +148,8 @@
 .contentItem:hover .icons {
   color: #0c95ec;
 }
-.contentItem:hover > .mainMenu{
-    background-color: pink;
+.contentItem:hover > .mainMenu {
+  background-color: pink;
 }
 .dvBtns {
   position: relative;
@@ -135,32 +212,6 @@
   -o-border-radius: 50%;
   font-size: 12px;
 }
-
-/* 
-/ */
-.mainMenu {
-    width: 100vw;
-  height: 360px;
-  background-color: red;
-  position: absolute;
-  top: 7.4rem;
-  z-index: 0;
-  transition:all 0.3s ease-out ;
-  -webkit-transition:all 0.3s ease-out ;
-  -moz-transition:all 0.3s ease-out ;
-  -ms-transition:all 0.3s ease-out ;
-  -o-transition:all 0.3s ease-out ;
-}
-
-.li{
-    position: absolute;
-    top: 0;
-    right: 50%;
-    width: 10%;
-    margin: 10rem;
-}
-
-
 
 @media screen and (min-width: 0px) and (max-width: 426px) {
   .quantity {
