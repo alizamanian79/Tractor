@@ -66,7 +66,6 @@
   width: 100%;
   height: 350px;
   padding: auto;
-  background-color: rgb(98, 64, 64);
   transition:all 0.3s ease-out ;
   -webkit-transition:all 0.3s ease-out ;
   -moz-transition:all 0.3s ease-out ;
@@ -82,12 +81,12 @@
 }
 
 .list{
-  color: azure;
+  color: rgb(201, 200, 200);
   cursor: pointer;
   display: flex;
   flex-direction: column;
   transition:all 0.3s ease-out;
-  
+  list-style: inside;
 }
 
 .list:hover{
@@ -99,7 +98,7 @@
 .dvListParts{
   width: 33.33%;
   height: 100%;
-  background-color: red;
+  background-color: white;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -114,9 +113,12 @@
   align-items: center;
   padding: 0.5rem 0;
   margin: 3rem 0 1rem 0;
-  border-bottom: 0.5px solid black;
+  border-bottom: 0.5px solid rgb(205, 205, 205);
+  color: black;
 }
-
+.txCol:hover{
+  color: black !important;
+}
 
 
 .contentItem:hover .dvList {
@@ -151,27 +153,8 @@ flex-direction: column;
 .contentItem:hover > .mainMenu {
   background-color: pink;
 }
-.dvBtns {
-  position: relative;
-  width: 5%;
-  height: 100%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-right: 0.5px solid rgb(230, 230, 230);
-}
 
-.dvBtns:nth-child(5) {
-  position: absolute;
-  width: 5%;
-  height: 100%;
-  background-color: transparent;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  border-right: 0.5px solid rgb(230, 230, 230);
-}
+
 
 .getQoets {
   width: 14.98%;
@@ -213,7 +196,33 @@ flex-direction: column;
   font-size: 12px;
 }
 
+
+
+.dvBtns {
+  position: relative;
+  width: 5%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 0.5px solid rgb(230, 230, 230);
+}
+.dvBtns:nth-child(5) {
+  position: relative;
+  width: 5%;
+  height: 100%;
+  background-color: transparent;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-right: 0.5px solid rgb(230, 230, 230);
+}
+
 @media screen and (min-width: 0px) and (max-width: 426px) {
+  .dvList{
+    display: none;
+  }
   .quantity {
     width: 15px;
     height: 15px;
@@ -221,7 +230,7 @@ flex-direction: column;
     top: 9px;
     left: 6px;
   }
-  .dvBtns:nth-child(5) {
+  .dvBtns:nth-child(3) {
     display: flex;
     width: 13%;
   }
@@ -239,13 +248,22 @@ flex-direction: column;
   }
   .dvBtns {
     width: 13%;
+    direction: ltr;
+  }
+  .dvBtns:nth-child(5) {
+    display: flex;
+    width: 13%;
+    direction: ltr;
   }
   .getQoets {
     display: none;
     width: 23%;
   }
 }
-@media screen and (min-width: 429px) and (max-width: 1023px) {
+@media screen and (min-width: 429px) and (max-width: 1024px) {
+  .dvList{
+    display: none;
+  }
   .img {
     height: 52px;
   }
@@ -261,6 +279,7 @@ flex-direction: column;
   .dvBtns {
     width: 10%;
   }
+  
   .dvBtns:nth-child(5) {
     display: flex;
     width: 10%;
