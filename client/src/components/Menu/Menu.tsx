@@ -196,9 +196,6 @@ function Menu() {
           />
         </div>
       </div>
-
-      {/*  
-      <MainMenu state={subMenus == undefined ? false :true} subMenu={subMenus}/> */}
     </div>
   );
 }
