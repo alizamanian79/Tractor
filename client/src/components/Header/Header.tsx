@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
 import Image from "next/image";
 import slide1 from "../../../public/slide1.jpg";
 import slide2 from "../../../public/slide2.jpg";
@@ -85,10 +84,8 @@ function Header() {
           ))}
         </Swiper>
 
-        
-
-      <button onClick={handleNextClick}  className={styles.BtnPrev}></button>
-      <button onClick={handlePrevClick} className={styles.BtnSkip}></button>
+        <button onClick={handleNextClick} className={styles.BtnSkip}></button>
+        <button onClick={handlePrevClick} className={styles.BtnPrev}></button>
       </div>
     </>
   );
