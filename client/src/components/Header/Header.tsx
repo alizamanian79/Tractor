@@ -10,7 +10,6 @@ import Image from "next/image";
 import slide1 from "../../../public/slide1.jpg";
 import slide2 from "../../../public/slide2.jpg";
 
-SwiperCore.use([Autoplay, Navigation, Pagination]);
 
 function Header() {
   const [content] = useState([
